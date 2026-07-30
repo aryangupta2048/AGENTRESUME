@@ -31,11 +31,11 @@ google_api_key = st.sidebar.text_input("Gemini-api",type = "password")
 groq_api_key = st.sidebar.text_input("Groq-api",type = "password")
 tavily_api_key = st.sidebar.text_input("Tavily-api",type = "password")
 
-all_Api = [tavily_api_key,groq_api_key,google_api_key]  
-  if not all(all_Api):  
+all_api = [tavily_api_key,groq_api_key,google_api_key]  
+  if not all(all_api):  
     st.error("Must give api keys")  
     st.stop()  
-elif all(all_Api):  
+elif all(all_api):  
     st.success("API KEYS LOADED SUCCESSFULLY")  
 else:  
     st.info("PASS ALL API-KEYS")    
