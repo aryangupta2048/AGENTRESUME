@@ -32,7 +32,7 @@ groq_api_key = st.sidebar.text_input("Groq-api",type = "password")
 tavily_api_key = st.sidebar.text_input("Tavily-api",type = "password")
 
 all_api = [tavily_api_key,groq_api_key,google_api_key]  
-  if not all(all_api):  
+if not all(all_api):  
     st.error("Must give api keys")  
     st.stop()  
 elif all(all_api):  
