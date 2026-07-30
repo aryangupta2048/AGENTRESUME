@@ -13,6 +13,17 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 
+
+
+#To Show web-app : complete page layout
+st.set_page_config(layout='wide')
+
+# To give title
+st.title("AI RESUME GENERATOR")
+st.write("""This app helps user to build customized Professional Resume with latest job apply links""")
+
+st.image("bg.png")
+
 #==============API KEYS=============
 google_api_key = "AQ.Ab8RN6J5SBn0QB8AnxBC_zijWziMD9lJJs9G-2HsRTeuF6SDXQ"
 groq_api_key = "sk_NCvtCF4IL2ieJz7YkujAWGdyb3FYEzyWrqPGh3fXblmtUyMJYBkRg"
@@ -23,8 +34,10 @@ model = ChatGoogleGenerativeAI(
     model = 'gemini-3.5-flash-lite',
 google_api_key = google_api_key
 )
-response=model.invoke('HELLO BUDDY!')
-response.content[-1]['text']
+
+
+# response=model.invoke('HELLO BUDDY!')
+# response.content[-1]['text']
 
 #==============================
 def search_latest_news_jobs(query):
@@ -41,7 +54,7 @@ def search_latest_news_jobs(query):
     model = model,
     tools = [search_latest_news_jobs])
 
-agent
+# agent
 
 #=====================================
 def main_agent(agent , query):
@@ -80,9 +93,10 @@ def main_agent(agent , query):
   return code
 
   #===================================================
-  code = main_agent(agent,"ARYAN GUPTA , GEN AI EXPERT")
-from IPython import display as DISPLAY
-DISPLAY.HTML(code)
+
+# code = main_agent(agent,"ARYAN GUPTA , GEN AI EXPERT")
+# from IPython import display as DISPLAY
+# DISPLAY.HTML(code)
 
 #==================================================
 def get_jobs(agent,
@@ -99,5 +113,5 @@ def get_jobs(agent,
 
     return code
 
-code = get_jobs(agent)
-DISPLAY.HTML(code)
+# code = get_jobs(agent)
+# DISPLAY.HTML(code)
