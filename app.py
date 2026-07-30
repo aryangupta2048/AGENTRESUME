@@ -27,9 +27,9 @@ st.sidebar.title("Fill Important Details")
 st.sidebar.image("bg.png")
 
 #==============API KEYS=============
-google_api_key = st.sidebar.text_input("Gemini-api",type = "password")
-groq_api_key = st.sidebar.text_input("Groq-api",type = "password")
-tavily_api_key = st.sidebar.text_input("Tavily-api",type = "password")
+google_api_key = st.sidebar.text_input("gemini-api",type = "password")
+groq_api_key = st.sidebar.text_input("groq-api",type = "password")
+tavily_api_key = st.sidebar.text_input("tavily-api",type = "password")
 
 #=================================
 model = ChatGoogleGenerativeAI(
