@@ -23,6 +23,9 @@ st.write("""This app helps user to build customized Professional Resume with lat
 
 st.image("bg.png")
 
+st.sidebar.title("fill important details")
+st.sidebar.image("bg.png")
+
 #==============API KEYS=============
 google_api_key = "AQ.Ab8RN6J5SBn0QB8AnxBC_zijWziMD9lJJs9G-2HsRTeuF6SDXQ"
 groq_api_key = "sk_NCvtCF4IL2ieJz7YkujAWGdyb3FYEzyWrqPGh3fXblmtUyMJYBkRg"
